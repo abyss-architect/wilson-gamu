@@ -23,6 +23,6 @@ public abstract class Item {
   // Method for displaying the item's name & description. Output to console should
   // be handled by the UI class.
   public String displayItem() {
-    return this.itemName + "\n" + this.itemDescription;
+    return this.itemName + ":\n" + this.itemDescription;
   }
 }
