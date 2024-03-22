@@ -3,6 +3,11 @@ Class for any healing act. It either increases the player's hp by 10 (normal hea
 */
 
 public class HealingPotion extends Potion implements Usable {
-	public void Use(Entity entity) { entity.setHP(entity.getHP() + 10); }
-  public void Use(Entity entity, int amount) { entity.setHP(entity.getHP() + amount); }
+  public void Use(Entity entity) {
+    entity.setHP(entity.getHP() + 10);
+  }
+
+  public void Use(Entity entity, int amount) {
+    entity.setHP(entity.getHP() + amount);
+  }
 }

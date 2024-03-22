@@ -9,5 +9,4 @@ public class ManaPotion extends Potion implements Usable {
   public void Use(Entity entity, int amount) {
     entity.setMP(entity.getMP() + amount);
   }
-  
 }
