@@ -32,4 +32,9 @@ public class Weapon extends Item implements Usable {
 	public void Use(Entity entity) { 
     entity.setHP(entity.getHP() - weaponDamage); 
   }
+
+  // Method for limiting the attack speed of a weapon.
+  public void limitAttackSpeed(int min, int max) {
+    
+  }
 }
