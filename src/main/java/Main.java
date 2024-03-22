@@ -4,13 +4,12 @@ public class Main {
 	public static void main(String[] args) {
 
 		Game game = new Game();
-
 		
 		// String test_floor = "@ R R X X X R\n" +
 		// 										"R X X X X X R\n" +
 		// 										"R R R R R R R\n" +
 		// 										"R X X R X X R\n" +
-		// 										"R R X R X X R\n" +
+		// 						  			"R R X R X X R\n" +
 		// 										"R R R R X X R\n";
 
 		String test_floor = "@ R R X\n" +
