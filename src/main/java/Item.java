@@ -17,12 +17,10 @@ public abstract class Item {
   // Overriding the toString method to display the item's name.
   @Override
   public String toString() {
-    return this.itemName;
+    return this.itemName + "\n" + this.itemDescription;
   }
 
-  // Method for displaying the item's name & description. Output to console should
+  // Abstract Method for displaying the item's name & description. Output to console should
   // be handled by the UI class.
-  public String displayItem() {
-    return this.itemName + ":\n" + this.itemDescription;
-  }
+  public abstract String displayItem();
 }

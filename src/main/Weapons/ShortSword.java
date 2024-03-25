@@ -1,4 +1,4 @@
-public class ShortSword extends CloseRange{
+public class ShortSword extends CloseRange {
 
   // Constructor
   public ShortSword(String itemName, String itemDescription, int weaponDamage, int attackSpeed, int attackRange) {
