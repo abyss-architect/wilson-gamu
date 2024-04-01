@@ -5,7 +5,7 @@ public class Floor {
 
   // Constructor.
 	public Floor() {
-
+		
 	}
   
   // Deep-Copy constructor.

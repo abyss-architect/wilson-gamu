@@ -23,7 +23,7 @@ public class Weapon extends Item implements Usable {
   // Constructor.
   public Weapon(String itemName, String itemDescription, int weaponDamage, int attackSpeed, int attackRange) {
     super(itemName, itemDescription);
-    this.weaponDamage = weaponDamage;
+    this.weaponDamage = weaponDamage; // PP
     this.attackSpeed = attackSpeed;
     this.attackRange = attackRange;
   }
