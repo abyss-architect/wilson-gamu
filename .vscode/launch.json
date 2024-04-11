@@ -11,6 +11,24 @@
             "console": "externalTerminal",
             "mainClass": "Main",
             "projectName": "wilson_gamu"
+        },
+        {
+            "type": "java",
+            "name": "Launch External Terminal Redirect Output",
+            "request": "launch",
+            "console": "externalTerminal",
+            "mainClass": "Main",
+            "projectName": "wilson_gamu",
+            "args": [">", "output.txt"]
+        },
+        {
+            "type": "java",
+            "name": "[Test] Launch External Terminal Redirect Output",
+            "request": "launch",
+            "console": "externalTerminal",
+            "mainClass": "TestRunner",
+            "projectName": "wilson_gamu",
+            "args": [">", "output.txt"]
         }
     ]
 }

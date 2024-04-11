@@ -45,22 +45,5 @@ public class Main {
 		map.use(player);
 		map2.use(player);
 
-		Inventory inv = new Inventory(10);
-		inv.setClassMaxItemCount(Weapon.class, 2);
-		inv.setClassMaxItemCount(HealingPotion.class, 2);
-		ArrayList<Item> items = new ArrayList<>();
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new HealingPotion());
-		items.add(new HealingPotion());
-
-		for (Item item : items) {
-			if (inv.addItem(item)) 
-				UI.printLine(UI.goodText("Added item: " + String.valueOf(item.getClass())));
-			else
-				UI.printLine(UI.badText("Cannot add item: " + String.valueOf(item.getClass())));
-		}
 	}
 }
