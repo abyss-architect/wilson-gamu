@@ -22,3 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Repl.it
+.breakpoints
+.replit
+replit.nix
+
+# Stuff I have no clue what it is for
+.local/*
+.settings/*
+.classpath
+.project

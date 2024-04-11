@@ -1,3 +1,0 @@
-class BetterPotion extends Potion {
-	
-}
