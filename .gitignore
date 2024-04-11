@@ -28,6 +28,9 @@ replay_pid*
 .replit
 replit.nix
 
+# VS Code
+.vscode/*
+
 # Stuff I have no clue what it is for
 .local/*
 .settings/*
