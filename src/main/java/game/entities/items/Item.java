@@ -30,4 +30,10 @@ public abstract class Item extends GameObject {
   public String displayItem() {
     return this.toString();
   };
+
+  // Class setter
+  public void setItem(String itemName, String itemDescription) {
+    this.itemName = itemName;
+    this.itemDescription = itemDescription;
+  }
 }

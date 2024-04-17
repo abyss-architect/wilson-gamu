@@ -1,7 +1,6 @@
 package game.entities.items.weapons;
 /*
-  Created by: Wilson J. Villegas M.
-  Last modified: 03/22/2024.
+  Last modified: 04/07/2024.
 
   Close-range class that will be used for all the sword-type weapons, which there will be 3 types of: 
   Dagger,
@@ -10,4 +9,10 @@ package game.entities.items.weapons;
   See their respective classes for details.
 */
 
-public abstract class CloseRange extends Weapon { }
+public abstract class CloseRange extends Weapon { 
+
+    protected CloseRange() { 
+
+    }
+    
+}
