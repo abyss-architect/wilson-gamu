@@ -13,5 +13,7 @@ public class LongSword extends CloseRange {
 
     public void heavySwing(Entity target) {
         this.setWeaponStats(getWeaponDamage() + 5, getAttackSpeed() - 2, getAttackRange() + 1);
+        this.useAttack(target);
+        this.setWeaponStats(getWeaponDamage() - 5, getAttackSpeed() + 2, getAttackRange() - 1);
     }
 }
