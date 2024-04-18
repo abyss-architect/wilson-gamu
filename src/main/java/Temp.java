@@ -1,6 +1,6 @@
 public class Temp {
     public static void Test() {
-        System.out.println("Wilson sucks");
-        Temp temp = new Temp();
+        System.out.println("Lulu is the best");
+        int a = 1;
     }
 }
