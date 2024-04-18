@@ -1,6 +1,7 @@
 public class Temp {
     public static void Test() {
-        System.out.println("Wilson sucks");
-        Temp temp = new Temp();
+        int x = 69;
+        String s = "okay bruh";
+        System.out.println("HLISJFLJS" + s);
     }
 }
