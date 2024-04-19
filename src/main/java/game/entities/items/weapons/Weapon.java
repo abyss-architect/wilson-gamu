@@ -20,8 +20,13 @@ public abstract class Weapon extends Item implements Attack {
     protected Weapon() { }
 
     // Method for "using" a weapon, which just means attacking in the context of the game.
-	public void useAttack(Entity target) { target.setHP(target.getHP() - weaponDamage); }
-    public void useAttack(Entity target, Entity user) { useAttack(target); }
+	  public void useAttack(Entity target) { 
+      Damage d = new Damage(target);
+      d.dealDamage(weaponDamage);
+    }
+    public void useAttack(Entity target, Entity user) { 
+      useAttack(target);
+    }
 
     // Class setters
     public void setWeaponStats(int damage, int speed, int range) {
@@ -29,9 +34,18 @@ public abstract class Weapon extends Item implements Attack {
       this.attackSpeed = speed;
       this.attackRange = range;
     }
-    public void setWeaponDamage(int weaponDamage) { this.weaponDamage = weaponDamage; }
-    public void setAttackSpeed(int attackSpeed) { this.attackSpeed = attackSpeed; }
-    public void setAttackRange(int attackRange) { this.attackRange = attackRange; }
+    public Weapon setWeaponDamage(int weaponDamage) { 
+      this.weaponDamage = weaponDamage; 
+      return this;
+    }
+    public Weapon setAttackSpeed(int attackSpeed) { 
+      this.attackSpeed = attackSpeed; 
+      return this;
+    }
+    public Weapon setAttackRange(int attackRange) {
+      this.attackRange = attackRange; 
+      return this;
+    }
 
     // Class getters
     public int getWeaponDamage() { return weaponDamage; }

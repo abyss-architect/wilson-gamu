@@ -3,6 +3,8 @@ package game.entities.items.weapons;
 import game.entities.Entity;
 
 public class Dagger extends CloseRange { 
+    // Local variables
+    private int[] quickStabStats = new int[] {1, 5, 0};
     
     // Constructor for dagger-type weapons
     public Dagger(int damage, int range, int speed) {
@@ -14,8 +16,8 @@ public class Dagger extends CloseRange {
 
     // Quick Stab skill.
     public void quickStab(Entity target) {
-        this.setWeaponStats(getWeaponDamage() - 1, getAttackSpeed() + 5, getAttackRange());
-        this.useAttack(target);
-        this.setWeaponStats(getWeaponDamage() + 1, getAttackSpeed() - 5, getAttackRange());
+        Damage d = new Damage(target);
+        d.dealStatDamage(this.getWeaponDamage(), -1);
+
     }
 }
