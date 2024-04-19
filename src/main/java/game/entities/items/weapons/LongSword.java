@@ -5,7 +5,7 @@ import game.entities.Entity;
 public class LongSword extends CloseRange {
 
     public LongSword(int damage, int range, int speed) {
-        this.setItem("Dagger", "Just a regular dagger.");
+        this.setItem("Long Sword", "Just a regular dagger.");
         this.setWeaponDamage(damage);
         this.setAttackRange(range);
         this.setAttackSpeed(speed);

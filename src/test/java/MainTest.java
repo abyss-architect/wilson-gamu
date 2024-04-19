@@ -16,10 +16,10 @@ public class MainTest {
 		inv.setClassMaxItemCount(Weapon.class, 2);
 		inv.setClassMaxItemCount(HealingPotion.class, 2);
 		ArrayList<Item> items = new ArrayList<>();
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
 		items.add(new HealingPotion());
 		items.add(new HealingPotion());
 
