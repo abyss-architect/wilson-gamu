@@ -1,11 +1,12 @@
 package game.entities.items;
-import java.util.HashMap;
 
+import game.Game;
 import game.UI;
 import game.entities.Entity;
 import game.scene.Floor;
 import game.scene.Room;
 import game.scene.RoomType;
+import game.utils.SpecialString;
 
 public class Map extends Item {
 	private Floor floor;
@@ -51,14 +52,14 @@ public class Map extends Item {
 			
 			for (Room room : rowRooms) {
 				if (this.unknownMask[rowNum][colNum]) {
-					output += UI.question(UI.UNKNOWN_ICON);
+					output += SpecialString.question(Game.UNKNOWN_ICON);
 				} else {
 					if (room.containsPlayer()) {
-						output += UI.importantText(UI.PLAYER_ICON);
+						output += SpecialString.importantText(Game.PLAYER_ICON);
 					} else if (room.getRoomType() == RoomType.ROOM) {
-						output += UI.goodText(UI.ROOM_ICON);
+						output += SpecialString.goodText(Game.ROOM_ICON);
 					} else {
-						output += UI.unimportantText(String.valueOf(room));
+						output += SpecialString.unimportantText(String.valueOf(room));
 					}
 				}
 
@@ -102,10 +103,10 @@ public class Map extends Item {
 		// legend.put("Wall", Game.WALL_ICON);
 		String output = "";
 		
-		output += UI.importantText(UI.PLAYER_ICON + " : Player\n");
-		output += UI.goodText(UI.ROOM_ICON + " : Room\n");
-		output += UI.unimportantText(UI.WALL_ICON + " : Wall\n");
-		output += UI.question(UI.UNKNOWN_ICON + " : Unknown\n");
+		output += SpecialString.importantText(Game.PLAYER_ICON + " : Player\n");
+		output += SpecialString.goodText(Game.ROOM_ICON + " : Room\n");
+		output += SpecialString.unimportantText(Game.WALL_ICON + " : Wall\n");
+		output += SpecialString.question(Game.UNKNOWN_ICON + " : Unknown\n");
 
 		UI.printLine(output);
 	}

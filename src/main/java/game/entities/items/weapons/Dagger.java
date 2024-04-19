@@ -1,12 +1,16 @@
 package game.entities.items.weapons;
 
 import game.entities.Entity;
+import game.utils.SpecialString;
 
 public class Dagger extends CloseRange { 
     
     // Constructor for dagger-type weapons
     public Dagger(int damage, int range, int speed) {
-        this.setItem("Dagger", "Just a regular dagger");
+        this.setItem(
+            new SpecialString("Dagger"),
+            new SpecialString("Just a regular dagger")
+        );
         this.setWeaponDamage(damage);
         this.setAttackRange(range);
         this.setAttackSpeed(speed);

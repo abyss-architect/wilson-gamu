@@ -1,6 +1,0 @@
-[32mAdded item: class game.entities.items.weapons.Dagger[0m
-[32mAdded item: class game.entities.items.weapons.Dagger[0m
-[31mCannot add item: class game.entities.items.weapons.Dagger[0m
-[31mCannot add item: class game.entities.items.weapons.Dagger[0m
-[32mAdded item: class game.entities.items.potions.HealingPotion[0m
-[32mAdded item: class game.entities.items.potions.HealingPotion[0m

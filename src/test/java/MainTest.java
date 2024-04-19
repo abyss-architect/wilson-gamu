@@ -8,6 +8,7 @@ import game.entities.items.Item;
 import game.entities.items.potions.HealingPotion;
 import game.entities.items.weapons.Dagger;
 import game.entities.items.weapons.Weapon;
+import game.utils.SpecialString;
 
 public class MainTest {
 
@@ -16,18 +17,18 @@ public class MainTest {
 		inv.setClassMaxItemCount(Weapon.class, 2);
 		inv.setClassMaxItemCount(HealingPotion.class, 2);
 		ArrayList<Item> items = new ArrayList<>();
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
 		items.add(new HealingPotion());
 		items.add(new HealingPotion());
 
 		for (Item item : items) {
 			if (inv.addItem(item)) 
-				UI.printLine(UI.goodText("Added item: " + String.valueOf(item.getClass())));
+				UI.printLine(SpecialString.goodText("Added item: " + String.valueOf(item.getClass())));
 			else
-				UI.printLine(UI.badText("Cannot add item: " + String.valueOf(item.getClass())));
+				UI.printLine(SpecialString.badText("Cannot add item: " + String.valueOf(item.getClass())));
 		}
 	}
 
@@ -39,18 +40,18 @@ public class MainTest {
 		inv.setClassMaxItemCount(Weapon.class, 2);
 		inv.setClassMaxItemCount(HealingPotion.class, 2);
 		ArrayList<Item> items = new ArrayList<>();
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
-		items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
+		// items.add(new Dagger());
 		items.add(new HealingPotion());
 		items.add(new HealingPotion());
 
 		for (Item item : items) {
 			if (inv.addItem(item)) 
-				output += UI.goodText("Added item: " + String.valueOf(item.getClass()));
+				output += SpecialString.goodText("Added item: " + String.valueOf(item.getClass()));
 			else
-				output += UI.badText("Cannot add item: " + String.valueOf(item.getClass()));
+				output += SpecialString.badText("Cannot add item: " + String.valueOf(item.getClass()));
 		}
 
         // Define the expected output
