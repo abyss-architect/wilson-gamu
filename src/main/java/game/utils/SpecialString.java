@@ -90,7 +90,7 @@ public class SpecialString implements Iterable<SpecialString> {
             specialString.setColor(color);
 
         if (specialString.getPrintSpeed() < 0) {
-            specialString.setPrintSpeed(printSpeed);
+            specialString.setPrintSpeed(this.printSpeed);
         }
 
         return this;

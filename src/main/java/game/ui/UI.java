@@ -1,4 +1,4 @@
-package game;
+package game.ui;
 
 import game.utils.SpecialString;
 import game.utils.StringColor;
@@ -8,10 +8,17 @@ public class UI {
 		System.out.print(text);
 	}
 
+	public static void printLine(String text) {
+		System.out.println(text);
+	}
+
 	public static void print(SpecialString specialString) {
 		for (SpecialString s : specialString) {
 			String text = s.toString();
 			long printStep = (long) ((s.getPrintSpeed() / text.length()) * 1000);
+
+			if (printStep < 1)
+				printStep = 0;
 
 			if (s.hasColor())
 				System.out.print(s.getColor().getColor());
@@ -27,8 +34,8 @@ public class UI {
 
 			if (s.hasColor())
 				System.out.print(StringColor.RESET.getColor());
-			
-			if (s.endsInNewLine())
+
+			if (s != specialString && s.endsInNewLine())
 				System.out.println();
 		}
 
@@ -36,11 +43,12 @@ public class UI {
 			System.out.println();
 	}
 	
-	public static void printLine(String text) {
-		System.out.println(text);
-	}
-	
 	public static void clear() {
 		System.out.print("\033[H\033[2J");
+	}
+
+	public static String ask(SpecialString question) {
+		print(question);
+		return System.console().readLine();
 	}
 }

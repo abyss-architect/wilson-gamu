@@ -1,11 +1,11 @@
 package game.entities.items;
 
 import game.Game;
-import game.UI;
 import game.entities.Entity;
 import game.scene.Floor;
 import game.scene.Room;
 import game.scene.RoomType;
+import game.ui.UI;
 import game.utils.SpecialString;
 
 public class Map extends Item {

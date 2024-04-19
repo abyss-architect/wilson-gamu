@@ -1,6 +1,8 @@
 package game;
 
 import game.entities.Player;
+import game.ui.UI;
+import game.ui.menu.ActionMenu;
 import game.utils.SpecialString;
 import game.utils.StringColor;
 
@@ -41,6 +43,9 @@ public class Game {
 
     public static void start() {
         printBanner();
+
+        ActionMenu actionMenu = new ActionMenu();
+        actionMenu.use();
     }
 
     public static void printBanner() {

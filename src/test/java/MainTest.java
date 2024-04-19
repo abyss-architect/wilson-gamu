@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 
-import game.UI;
 import game.entities.Inventory;
 import game.entities.items.Item;
 import game.entities.items.potions.HealingPotion;
 import game.entities.items.weapons.Dagger;
 import game.entities.items.weapons.Weapon;
+import game.ui.UI;
 import game.utils.SpecialString;
 
 public class MainTest {
