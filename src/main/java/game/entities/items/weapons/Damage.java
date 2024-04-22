@@ -1,17 +1,15 @@
 package game.entities.items.weapons;
 
-import game.entities.Entity;
-
 public class Damage {
-    private Entity target;
+    private Damageable target;
 
-    public Damage(Entity target) {
+    public Damage(Damageable target) {
         this.target = target;
     }
 
-    public void dealDamage(int damageDealt) { target.setHP(target.getHP() - damageDealt); }
-    public void dealStatDamage(int damageDealt, int dmgStatChange) {
-        target.setHP(target.getHP() - (damageDealt + dmgStatChange));
+    public Damage addDamage(int damageTaken) {
+        target.takeDamage(damageTaken);
+        return this;
     }
     
 }
