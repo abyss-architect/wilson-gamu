@@ -19,10 +19,10 @@ public abstract class Weapon extends Item implements Attack, Damageable {
     protected Weapon() { }
 
     // Method for "using" a weapon, which just means attacking in the context of the game.
-	  public void useAttack(Entity target) { 
+	  public void useAttack(Damageable target) { 
       Damage d = new Damage(target);
-      d.addDamage(weaponDamage);
-      this.takeDamage();
+      d.addDamage(1);
+      takeDamage(1);
     }
     public void useAttack(Entity target, Entity user) { 
       useAttack(target);
@@ -58,8 +58,7 @@ public abstract class Weapon extends Item implements Attack, Damageable {
     public int getDurability() { return durability; }
 
     // Method for any weapon to take damage.
-    public void takeDamage() {
-      Damage dmg = new Damage(this);
-      dmg.addDamagetoWeapon(1);
+    public void takeDamage(int damageTaken) {
+      this.durability = this.durability - damageTaken;
     }
 }
