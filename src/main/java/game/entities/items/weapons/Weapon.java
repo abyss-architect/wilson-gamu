@@ -19,36 +19,36 @@ public abstract class Weapon extends Item implements Attack, Damageable {
     protected Weapon() { }
 
     // Method for "using" a weapon, which just means attacking in the context of the game.
-	  public void useAttack(Damageable target) { 
-      Damage d = new Damage(target);
-      d.addDamage(1);
-      takeDamage(1);
+	public void useAttack(Damageable target) { 
+        Damage d = new Damage(target);
+        d.addDamage(1);
+        takeDamage(1);
     }
     public void useAttack(Entity target, Entity user) { 
-      useAttack(target);
+        useAttack(target);
     }
 
     // Class setters
     public void setWeaponStats(int damage, int speed, int range) {
-      this.weaponDamage = damage;
-      this.attackSpeed = speed;
-      this.attackRange = range;
+        this.weaponDamage = damage;
+        this.attackSpeed = speed;
+        this.attackRange = range;
     }
     public Weapon setWeaponDamage(int weaponDamage) { 
-      this.weaponDamage = weaponDamage; 
-      return this;
+        this.weaponDamage = weaponDamage; 
+        return this;
     }
     public Weapon setAttackSpeed(int attackSpeed) { 
-      this.attackSpeed = attackSpeed; 
-      return this;
+        this.attackSpeed = attackSpeed; 
+        return this;
     }
     public Weapon setAttackRange(int attackRange) {
-      this.attackRange = attackRange; 
-      return this;
+        this.attackRange = attackRange; 
+        return this;
     }
     public Weapon setDurability(int durability) {
-      this.durability = durability;
-      return this;
+        this.durability = durability;
+        return this;
     }
 
     // Class getters
@@ -59,6 +59,6 @@ public abstract class Weapon extends Item implements Attack, Damageable {
 
     // Method for any weapon to take damage.
     public void takeDamage(int damageTaken) {
-      this.durability = this.durability - damageTaken;
+      this.durability -= damageTaken;
     }
 }
