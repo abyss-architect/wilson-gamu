@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 import game.entities.Entity;
 import game.entities.Player;
-import game.entities.items.Item;
+import game.items.Item;
 import game.utils.Position;
 
 // Enum for differentiating for if a room is a regular room, an inacessible spot, or misc (I think).

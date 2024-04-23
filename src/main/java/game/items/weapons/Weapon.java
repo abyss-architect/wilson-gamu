@@ -1,4 +1,4 @@
-package game.entities.items.weapons;
+package game.items.weapons;
 /*
   Implemented by: Wilson J. Villegas M.
   Last modified: 03/22/2024.
@@ -8,7 +8,7 @@ package game.entities.items.weapons;
 */
 
 import game.entities.Entity;
-import game.entities.items.Item;
+import game.items.Item;
 
 public abstract class Weapon extends Item implements Attack {
     // Class fields.
@@ -20,7 +20,7 @@ public abstract class Weapon extends Item implements Attack {
     protected Weapon() { }
 
     // Method for "using" a weapon, which just means attacking in the context of the game.
-	public void useAttack(Entity target) { target.setHP(target.getHP() - weaponDamage); }
+    public void useAttack(Entity target) { target.setHP(target.getHP() - weaponDamage); }
     public void useAttack(Entity target, Entity user) { useAttack(target); }
 
     // Class setters

@@ -10,7 +10,7 @@ The player should be able to 'search' throught their storage, and 'use' any of t
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import game.entities.items.Item;
+import game.items.Item;
 
 public class Inventory {
 	// private HashMap<Class, HashMap<ArrayList<Item>, Integer>> _inventory; // HashMap for storing the _inventory.

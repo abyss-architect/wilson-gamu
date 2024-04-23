@@ -35,7 +35,8 @@ public abstract class Menu {
             UI.ask(
                 new SpecialString("What would you like to do? ")
                     .setPrintSpeed(0.5f)
-                    .setColor(StringColor.BRIGHT_BLACK)
+                    .setColor(StringColor.BRIGHT_BLACK),
+                    ["\n"]
             )
         );
     }

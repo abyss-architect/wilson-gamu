@@ -2,8 +2,14 @@ package game.ui;
 
 import game.utils.SpecialString;
 import game.utils.StringColor;
+import game.utils.StringFormat;
 
 public class UI {
+	private static SpecialString defaultIllegalResponseMessage = new SpecialString("Invalid response. Please try again.")
+		.setColor(StringColor.BRIGHT_BLACK)
+		.addFormat(StringFormat.ITALIC)
+		.setEndInNewLine(true);
+
 	public static void print(String text) {
 		System.out.print(text);
 	}
@@ -22,6 +28,10 @@ public class UI {
 
 			if (s.hasColor())
 				System.out.print(s.getColor().getColor());
+
+			if (s.hasFormats())
+				for (StringFormat stringFormat : s.getFormats())
+					System.out.print(stringFormat.getFormat());
 
 			for (char c : text.toCharArray()) {
 				System.out.print(c);
@@ -50,5 +60,18 @@ public class UI {
 	public static String ask(SpecialString question) {
 		print(question);
 		return System.console().readLine();
+	}
+
+	public static String ask(SpecialString question, String[] illegalResponses) {
+		String response = ask(question);
+
+		for (String illegalResponse : illegalResponses) {
+			if (response.equals(illegalResponse)) {
+				print(defaultIllegalResponseMessage);
+				return ask(question, illegalResponses);
+			}
+		}
+
+		return response;
 	}
 }

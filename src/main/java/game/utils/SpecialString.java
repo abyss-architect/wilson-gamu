@@ -7,6 +7,7 @@ import java.util.NoSuchElementException;
 public class SpecialString implements Iterable<SpecialString> {
     private float printSpeed = -1;
     private StringColor color;
+    private ArrayList<StringFormat> stringFormats = new ArrayList<>();
     private boolean endInNewLine = false;
     private String text;
     private ArrayList<SpecialString> suffixSpecialStrings = new ArrayList<>();
@@ -120,6 +121,27 @@ public class SpecialString implements Iterable<SpecialString> {
 
     public StringColor getColor() {
         return color;
+    }
+
+    public SpecialString addFormat(StringFormat stringFormat) {
+        stringFormats.add(stringFormat);
+        return this;
+    }
+
+    public SpecialString addFormats(StringFormat[] stringFormats) {
+        for (StringFormat stringFormat : stringFormats) {
+            addFormat(stringFormat);
+        }
+
+        return this;
+    }
+
+    public StringFormat[] getFormats() {
+        return stringFormats.toArray(new StringFormat[0]);
+    }
+
+    public boolean hasFormats() {
+        return stringFormats.size() > 0;
     }
 
     public SpecialString setEndInNewLine(boolean endInNewLine) {

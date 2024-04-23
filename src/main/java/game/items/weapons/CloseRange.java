@@ -1,4 +1,4 @@
-package game.entities.items.weapons;
+package game.items.weapons;
 /*
   Last modified: 04/07/2024.
 

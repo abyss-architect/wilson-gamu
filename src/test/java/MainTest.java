@@ -3,10 +3,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import game.entities.Inventory;
-import game.entities.items.Item;
-import game.entities.items.potions.HealingPotion;
-import game.entities.items.weapons.Dagger;
-import game.entities.items.weapons.Weapon;
+import game.items.Item;
+import game.items.potions.HealingPotion;
+import game.items.weapons.Dagger;
+import game.items.weapons.Weapon;
 import game.ui.UI;
 import game.utils.SpecialString;
 

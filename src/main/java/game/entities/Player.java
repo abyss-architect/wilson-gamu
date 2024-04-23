@@ -1,9 +1,11 @@
 package game.entities;
-import game.entities.items.weapons.Attack;
+import game.Tickable;
+import game.items.weapons.Attack;
 
 public class Player extends Entity implements Attack {
     // Local variables
     private int baseDamage = 5;
+    private int speed = 5;
 
     // Placeholder constructor for the player class. Will update once I understand better how the positioning & inventory system work.
     public Player() { 
