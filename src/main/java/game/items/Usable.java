@@ -1,4 +1,4 @@
-package game.entities.items;
+package game.items;
 /*
   Interface for any usable item in the game. 
   Any item that can be used in the game should implement this interface.

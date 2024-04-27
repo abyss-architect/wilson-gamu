@@ -1,20 +1,18 @@
-package game.entities.items;
+package game.items;
 
 import game.GameObject;
+import game.utils.SpecialString;
 
 public abstract class Item extends GameObject {
   // Class fields.
-  private String itemName, itemDescription;
+  private SpecialString itemName = new SpecialString();
+  private SpecialString itemDescription = new SpecialString();
 
   // Default constructor for inheritance purposes.
-  protected Item() {
-
-    this.itemName = "";
-    this.itemDescription = "";
-  }
+  protected Item() { }
   
   // Constructor for initializing the class fields.
-  protected Item(String itemName, String itemDescription) {
+  protected Item(SpecialString itemName, SpecialString itemDescription) {
     this.itemName = itemName;
     this.itemDescription = itemDescription;
   }
@@ -29,5 +27,11 @@ public abstract class Item extends GameObject {
   // be handled by the UI class.
   public String displayItem() {
     return this.toString();
-  };
+  }
+
+  // Class setter
+  public void setItem(SpecialString itemName, SpecialString itemDescription) {
+    this.itemName = itemName;
+    this.itemDescription = itemDescription;
+  }
 }

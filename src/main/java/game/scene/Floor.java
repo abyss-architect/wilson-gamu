@@ -1,7 +1,7 @@
 package game.scene;
 
-import game.UI;
 import game.utils.Position;
+import game.utils.SpecialString;
 import game.utils.Tuple;
 
 public class Floor {
@@ -60,9 +60,9 @@ public class Floor {
 		for (Room[] rowRooms : this.rooms) {
 			for (Room room : rowRooms) {
 				if (room.getRoomType() == RoomType.ROOM) {
-					UI.goodText(room + " ");
+					SpecialString.goodText(room + " ");
 				} else {
-					UI.unimportantText(room + " ");
+					SpecialString.unimportantText(room + " ");
 				}
 			}
 

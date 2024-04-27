@@ -1,3 +1,3 @@
-package game.entities.items.weapons;
+package game.items.weapons;
 
 public class LongRange extends Weapon { }
