@@ -12,7 +12,7 @@ import game.entities.items.Item;
 
 public abstract class Weapon extends Item implements Attack, Damageable {
     // Class fields.
-    private int weaponDamage, attackSpeed, attackRange;
+    private double powerMod, atkSpeedMod, atkRangeMod;
     private int durability;
     
     // Default constructor for inheritance purposes.  
@@ -24,37 +24,21 @@ public abstract class Weapon extends Item implements Attack, Damageable {
         d.addDamage(1);
         takeDamage(1);
     }
-    public void useAttack(Entity target, Entity user) { 
-        useAttack(target);
-    }
 
     // Class setters
-    public void setWeaponStats(int damage, int speed, int range) {
-        this.weaponDamage = damage;
-        this.attackSpeed = speed;
-        this.attackRange = range;
-    }
-    public Weapon setWeaponDamage(int weaponDamage) { 
-        this.weaponDamage = weaponDamage; 
-        return this;
-    }
-    public Weapon setAttackSpeed(int attackSpeed) { 
-        this.attackSpeed = attackSpeed; 
-        return this;
-    }
-    public Weapon setAttackRange(int attackRange) {
-        this.attackRange = attackRange; 
-        return this;
-    }
-    public Weapon setDurability(int durability) {
-        this.durability = durability;
+    public Weapon setStats(double pm, double sm, double rm, int dur) {
+        this.powerMod = pm;
+        this.atkSpeedMod = sm;
+        this.atkRangeMod = rm;
+        this.durability = dur;
+
         return this;
     }
 
     // Class getters
-    public int getWeaponDamage() { return weaponDamage; }
-    public int getAttackSpeed() { return attackSpeed; }
-    public int getAttackRange() { return attackRange; }
+    public double getPowerMod() { return powerMod; }
+    public double getAtkSpeedMod() { return atkSpeedMod; }
+    public double getAtkRangeMod() { return atkRangeMod; }
     public int getDurability() { return durability; }
 
     // Method for any weapon to take damage.
